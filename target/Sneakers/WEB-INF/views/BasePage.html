@@ -1,0 +1,29 @@
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Sneakers</title>
+</head>
+<body>
+<h1>All sneakers:</h1>
+
+<table>
+    <tr th:each="pair : ${allSneakers}">
+        <td th:utext="${pair.id}"></td>
+        <td th:utext="${pair.brand}"></td>
+        <td th:utext="${pair.model}"></td>
+        <td th:utext="${pair.sport}"></td>
+        <td th:utext="${pair.amount}"></td>
+
+        <td>
+            <a th:href="@{'/edit/' + ${pair.id}}">edit</a>
+            <a th:href="@{'/delete/' + ${pair.id}}">delete</a>
+        </td>
+    </tr>
+</table>
+
+<p>
+    <a href="/add">Add new pair</a>
+</p>
+
+</body>
+</html>
