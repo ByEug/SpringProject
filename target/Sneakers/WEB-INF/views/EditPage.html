@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Edit pair</title>
+    <link rel="stylesheet" href="/res/style.css">
 </head>
 <body>
+<h1>Sneakers</h1>
+
 <form action="/edit" th:object="${pair}" method="POST">
     <input type="hidden" name="id" th:value="${pair.id}">
     <label for="brand">Brand</label>
@@ -17,5 +20,6 @@
     <input type="text" name="amount" id="amount" th:value="${pair.amount}">
     <input type="submit" value="Edit pair">
 </form>
+
 </body>
 </html>
